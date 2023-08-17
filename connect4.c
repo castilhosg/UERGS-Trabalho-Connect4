@@ -1,6 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+
+void zeraTabuleiro(int tabuleiro[6][7]){
+    
+    for (int i = 0; i < 6; i++) { //Zera o tabuleiro
+            
+        for (int j = 0; j < 7; j++) {
+                    
+                    tabuleiro[i][j] = 0;
+                    
+        }
+                
+    }
+
+}
 
 int main() {
     
@@ -10,6 +23,8 @@ int main() {
 
 
     while (novamente == 1){ //Enquanto novamente tiver valor 1, o jogo continua, e varias rodadas vão acontecendo
+        
+        zeraTabuleiro(tabuleiro);
         
         for (int i = 0; i < 6; i++) { //Zera o tabuleiro
         
